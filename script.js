@@ -20,24 +20,33 @@ function GetComputerChoice() {
     }
 }
 
-console.log(GetComputerChoice())
-
-
 
 function GetHumanChoice() {
     let item = prompt('Rock, paper or scissors?')
     if (item.toLowerCase === 'rock'.toLowerCase){
-        return 'You chose rock'
+        return 'rock'
     }
     else if (item.toLowerCase === 'paper'.toLowerCase){
-        return 'You chose paper'
+        return 'paper'
     }
     else if (item.toLowerCase === 'scissors'.toLowerCase){
-        return 'You chose scissors'
+        return 'scissors'
     }
     else{
-        return 'Please choose rock, paper or scissors'
+        console.log('Please choose rock, paper or scissors')
     }
 }
 
-console.log(GetHumanChoice())
+function playRound(humanChoice, computerChoice) {
+    computerChoice = GetComputerChoice();
+    humanChoice = GetHumanChoice();
+    console.log('The computer rolled:',computerChoice);
+    console.log('You chose:',humanChoice);
+
+    if(humanChoice === computerChoice){
+        console.log('It\'s a tie!')
+    }
+
+}
+
+playRound();
