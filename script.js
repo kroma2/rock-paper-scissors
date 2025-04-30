@@ -43,24 +43,33 @@ function playGame(){
     for (let i = 0; i < 5; i++) {
         playRound()
     }
+    console.log('Score:',humanScore,':',computerScore)
+    if (humanScore>computerScore) {
+        console.log('Congrats! You won the game.')
+    }
+    else if(computerScore>humanScore) {
+        console.log('You lost the game.')
+    }
+    else if(computerScore=humanScore)
+    {
+        console.log('The game ended in a tie!')
+    }
     function playRound(humanChoice, computerChoice) {
         computerChoice = GetComputerChoice();
         humanChoice = GetHumanChoice();
         console.log('You chose:',humanChoice);
         console.log('The computer rolled:',computerChoice);
-        
-    
         if(humanChoice === computerChoice){
-            console.log('It\'s a tie!')
+            console.log('Round tied')
         }
         else if (humanChoice === 'rock' & computerChoice === 'scissors' ||
                  humanChoice === 'paper' & computerChoice === 'rock'    ||
                  humanChoice === 'scissors' & computerChoice === 'paper'){
-            console.log('You win!')
+            console.log('Round won')
             humanScore++
         }
         else{
-            console.log('You lose!')
+            console.log('Round lost')
             computerScore++
         }
     }
