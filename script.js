@@ -22,7 +22,7 @@ function GetComputerChoice() {
 
 
 function GetHumanChoice() {
-    let item = prompt('Rock, paper or scissors?')
+    let item = prompt('Rock, paper or scissors?').toLowerCase()
 
     if (item === 'rock'){
         return 'rock'
