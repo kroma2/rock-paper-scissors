@@ -31,7 +31,7 @@ function GetHumanChoice() {
         return 'scissors'
     }
     else{
-        console.log('Please choose rock, paper or scissors')
+        console.log('A typo, you lose a point lol')
     }
 }
 
@@ -54,9 +54,10 @@ function playGame(){
     {
         console.log('The game ended in a tie!')
     }
+    
     function playRound(humanChoice, computerChoice) {
-        computerChoice = GetComputerChoice();
         humanChoice = GetHumanChoice();
+        computerChoice = GetComputerChoice();
         console.log('You chose:',humanChoice);
         console.log('The computer rolled:',computerChoice);
         if(humanChoice === computerChoice){
