@@ -41,13 +41,23 @@ function GetHumanChoice() {
 function playRound(humanChoice, computerChoice) {
     computerChoice = GetComputerChoice();
     humanChoice = GetHumanChoice();
-    console.log('The computer rolled:',computerChoice);
     console.log('You chose:',humanChoice);
+    console.log('The computer rolled:',computerChoice);
+    
 
     if(humanChoice === computerChoice){
         console.log('It\'s a tie!')
     }
-
+    else if (humanChoice === 'rock' & computerChoice === 'scissors' ||
+             humanChoice === 'paper' & computerChoice === 'rock'    ||
+             humanChoice === 'scissors' & computerChoice === 'paper'){
+        console.log('You win!')
+        humanScore++
+    }
+    else{
+        console.log('You lose!')
+        computerScore++
+    }
 }
 
 playRound();
