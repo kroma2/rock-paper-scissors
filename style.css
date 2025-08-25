@@ -1,15 +1,40 @@
-#play-buttons button{
-    border: 0;
-    font-size: 32px;
+html, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
-    color: white;
-    
+    height: 100%;
 }
+
+#play-buttons button{
+    font-size: 32px;
+    border: solid black;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0); 
+}
+
 #play-buttons button:hover{
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.75)
+    background-color: rgba(0, 0, 0, 0.25)
 }
 
 #play-buttons button:onclick{
     cursor: pointer;
+}
+
+#play-buttons {
+   display: flex;
+   gap: 10px;
+}
+
+#wrapper
+{
+    display: flex;
+    background-color: beige;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    height: 500px;
+    width: 500px;
+    border-radius: 25px;
 }
