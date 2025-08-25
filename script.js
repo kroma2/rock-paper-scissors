@@ -40,9 +40,7 @@ function GetHumanChoice() {
 function playGame(){
     let humanScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        playRound()
-    }
+   
     console.log('Score:',humanScore,':',computerScore)
     if (humanScore>computerScore) {
         console.log('Congrats! You won the game.')
