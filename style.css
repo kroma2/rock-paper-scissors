@@ -1,0 +1,15 @@
+#play-buttons button{
+    border: 0;
+    font-size: 32px;
+    background-color: black;
+    color: white;
+    
+}
+#play-buttons button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+#play-buttons button:onclick{
+    cursor: pointer;
+}
