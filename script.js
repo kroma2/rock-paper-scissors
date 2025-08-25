@@ -17,53 +17,19 @@ function GetComputerChoice() {
     }
 }
 
-
-function GetHumanChoice() {
-    let item = prompt('Rock, paper or scissors?').toLowerCase()
-
-    if (item === 'rock'){
-        return 'rock'
-    }
-    else if (item === 'paper'){
-        return 'paper'
-    }
-    else if (item === 'scissors'){
-        return 'scissors'
-    }
-    else{
-        console.log('A typo, you lose a point lol')
-    }
-}
-
-
-
-function playGame(){
-    let humanScore = 0;
-    let computerScore = 0;
-   
-    console.log('Score:',humanScore,':',computerScore)
-    if (humanScore>computerScore) {
-        console.log('Congrats! You won the game.')
-    }
-    else if(computerScore>humanScore) {
-        console.log('You lost the game.')
-    }
-    else if(computerScore=humanScore)
-    {
-        console.log('The game ended in a tie!')
-    }
     
     function playRound(humanChoice, computerChoice) {
-        humanChoice = GetHumanChoice();
+        let humanScore;
+        let computerScore;   
         computerChoice = GetComputerChoice();
         console.log('You chose:',humanChoice);
         console.log('The computer rolled:',computerChoice);
         if(humanChoice === computerChoice){
             console.log('Round tied')
         }
-        else if (humanChoice === 'rock' & computerChoice === 'scissors' ||
-                 humanChoice === 'paper' & computerChoice === 'rock'    ||
-                 humanChoice === 'scissors' & computerChoice === 'paper'){
+        else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
+                 humanChoice === 'paper' && computerChoice === 'rock'    ||
+                 humanChoice === 'scissors' && computerChoice === 'paper'){
             console.log('Round won')
             humanScore++
         }
@@ -72,7 +38,10 @@ function playGame(){
             computerScore++
         }
     }
-    
-}
 
-playGame()
+
+const buttonsDiv = document.querySelector('#play-buttons')
+
+buttonsDiv.addEventListener('click', (event) => {
+    playRound(event.target.id)
+});
