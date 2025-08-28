@@ -32,9 +32,30 @@ html, body {
     display: flex;
     background-color: beige;
     justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 20px;
     height: 500px;
     width: 500px;
     border-radius: 25px;
+    gap:200px;
 }
+
+#results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score
+{
+    padding-bottom:100px;
+}
+
+#player-score
+{
+    padding-right: 50px;
+}
+
+
+
