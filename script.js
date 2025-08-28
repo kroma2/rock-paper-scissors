@@ -21,26 +21,35 @@ function GetComputerChoice() {
     let computerScore = 0; 
 
     function playRound(humanChoice, computerChoice) {
-        const humanChoiceSpan = document.querySelector("#player-choice")
-        const pcChoiceSpan = document.querySelector("#pc-choice")
+        
+        const humanChoiceSpan = document.querySelector("#player-choice");
+        const pcChoiceSpan = document.querySelector("#pc-choice");
+
         computerChoice = GetComputerChoice();
         humanChoiceSpan.textContent = humanChoice;
         pcChoiceSpan.textContent = computerChoice;
+
+        const announce = document.querySelector("#announce-winner");
+
         if(humanChoice === computerChoice){
-            console.log('Round tied')
+            announce.textContent = 'Round tied';
+            announce.style.color = 'gray'
         }
         else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
                  humanChoice === 'paper' && computerChoice === 'rock'    ||
                  humanChoice === 'scissors' && computerChoice === 'paper'){
-            console.log('Round won')
-            humanScore++
+            announce.textContent = 'Round won';
+            announce.style.color = 'green'
+            humanScore++;
         }
         else{
-            console.log('Round lost')
-            computerScore++
+            announce.textContent = 'Round lost';
+            announce.style.color = 'red'
+            computerScore++;
         }
-        console.log(humanScore)
-        console.log(computerScore)
+
+        console.log(humanScore);
+        console.log(computerScore);
     }
 
 

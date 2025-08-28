@@ -5,12 +5,19 @@ html, body {
     background-color: black;
     height: 100%;
 }
+*
+{
+    font-family: 'Press Start 2P', cursive;
+}
+
+
 
 #play-buttons button{
-    font-size: 32px;
+    font-size: 24px;
     border: solid black;
     border-radius: 10px;
     background-color: rgba(0,0,0,0); 
+    height: 75px;
 }
 
 #play-buttons button:hover{
@@ -18,9 +25,6 @@ html, body {
     background-color: rgba(0, 0, 0, 0.25)
 }
 
-#play-buttons button:onclick{
-    cursor: pointer;
-}
 
 #play-buttons {
    display: flex;
@@ -35,8 +39,8 @@ html, body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
     border-radius: 25px;
     gap:200px;
 }
@@ -45,6 +49,11 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#played-round {
+    display: flex;
+    flex-direction: column;
 }
 
 #score
@@ -61,4 +70,7 @@ html, body {
     font-weight: bold;
 }
 
+#announce-winner {
+    font-weight: bold;
+}
 
