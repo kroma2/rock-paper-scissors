@@ -17,10 +17,10 @@ function GetComputerChoice() {
     }
 }
 
-    
+    let humanScore = 0;
+    let computerScore = 0; 
+
     function playRound(humanChoice, computerChoice) {
-        let humanScore;
-        let computerScore;   
         const humanChoiceSpan = document.querySelector("#player-choice")
         const pcChoiceSpan = document.querySelector("#pc-choice")
         computerChoice = GetComputerChoice();
@@ -39,6 +39,7 @@ function GetComputerChoice() {
             console.log('Round lost')
             computerScore++
         }
+        console.log(humanScore)
     }
 
 
