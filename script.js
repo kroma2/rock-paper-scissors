@@ -26,6 +26,7 @@ function GetComputerChoice() {
         const playerScoreSpan = document.querySelector("#player-score")
         const pcScoreSpan = document.querySelector ("#pc-score")
         const announce = document.querySelector("#announce-winner");
+        const playedRound = document.querySelector('#played-round')
 
         computerChoice = GetComputerChoice();
         humanChoiceSpan.textContent = humanChoice;
@@ -50,7 +51,9 @@ function GetComputerChoice() {
             announce.style.color = 'red'
             computerScore++;
             pcScoreSpan.textContent = computerScore;
-        }
+        } 
+
+        playedRound.style.transform = 'scale(1.2)'; setTimeout(() => playedRound.style.transform = 'scale(1)', 150);
 
     }
 
