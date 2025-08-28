@@ -24,8 +24,8 @@ function GetComputerChoice() {
         const humanChoiceSpan = document.querySelector("#player-choice")
         const pcChoiceSpan = document.querySelector("#pc-choice")
         computerChoice = GetComputerChoice();
-        console.log('You chose:',humanChoice);
-        console.log('The computer rolled:',computerChoice);
+        humanChoiceSpan.textContent = humanChoice;
+        pcChoiceSpan.textContent = computerChoice;
         if(humanChoice === computerChoice){
             console.log('Round tied')
         }
