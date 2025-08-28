@@ -57,5 +57,8 @@ html, body {
     padding-right: 50px;
 }
 
+#player-choice, #pc-choice{
+    font-weight: bold;
+}
 
 
