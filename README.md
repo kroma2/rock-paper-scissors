@@ -1,3 +1,18 @@
-# rock-paper-scissors
-This is a Rock Paper Scissors app written in javascript.
-It's a project for The Odin Project javascript foundations course.
+# Rock Paper Scissors 🎮
+
+A minimal Rock--Paper--Scissors game built with HTML, CSS, and
+JavaScript.
+
+## How to Play
+
+-   Open `index.html` in your browser
+-   Click Rock, Paper, or Scissors
+-   First to 5 points wins
+
+## Tech
+
+-   HTML, CSS, JavaScript
+
+## License
+
+MIT
