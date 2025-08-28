@@ -21,6 +21,8 @@ function GetComputerChoice() {
     function playRound(humanChoice, computerChoice) {
         let humanScore;
         let computerScore;   
+        const humanChoiceSpan = document.querySelector("#player-choice")
+        const pcChoiceSpan = document.querySelector("#pc-choice")
         computerChoice = GetComputerChoice();
         console.log('You chose:',humanChoice);
         console.log('The computer rolled:',computerChoice);
