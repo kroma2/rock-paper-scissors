@@ -77,5 +77,7 @@ function resetGame() {
 const buttonsDiv = document.querySelector('#play-buttons')
 
 buttonsDiv.addEventListener('click', (event) => {
-    playRound(event.target.id)
+     if (event.target.tagName === 'BUTTON') {
+        playRound(event.target.id);
+    }
 });
