@@ -40,6 +40,7 @@ function GetComputerChoice() {
             computerScore++
         }
         console.log(humanScore)
+        console.log(computerScore)
     }
 
 
