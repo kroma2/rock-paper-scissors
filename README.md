@@ -13,6 +13,6 @@ JavaScript.
 
 -   HTML, CSS, JavaScript
 
-## License
+## Live preview
 
-MIT
+https://kroma2.github.io/rock-paper-scissors/
